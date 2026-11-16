@@ -1,0 +1,9 @@
+{
+  "name": "tiny-cart",
+  "version": "1.0.0",
+  "description": "A tiny shopping cart: totals, discounts and prices.",
+  "type": "module",
+  "bin": { "tiny-cart": "cli.js" },
+  "scripts": { "test": "node --test" },
+  "license": "MIT"
+}
