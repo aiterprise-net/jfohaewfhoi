@@ -6,7 +6,7 @@ import { applyDiscount, cartTotal, formatPrice } from './src/cart.js';
 const args = process.argv.slice(2);
 const at = args.indexOf('--discount');
 const percent = at >= 0 ? Number(args[at + 1]) : 0;
-const items = args.filter((a, i) => i !== at && i !== at + 1).map((a) => {
+const items = args.filter((a, i) => at < 0 || (i !== at && i !== at + 1)).map((a) => {
   const [price, qty = '1'] = a.split('x');
   return { price: Number(price), qty: Number(qty) };
 });
